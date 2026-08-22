@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OpsPilot AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <div class="logo-icon">⚡</div>
+
+                <div>
+                    <h2>OpsPilot</h2>
+                    <span>AI DevOps Assistant</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <p>TOOLS</p>
+
+                <button class="tool active">
+                    🤖
+                    <span>AI Assistant</span>
+                </button>
+
+                <button class="tool">
+                    🐳
+                    <span>Docker</span>
+                </button>
+
+                <button class="tool">
+                    🐧
+                    <span>Linux</span>
+                </button>
+
+                <button class="tool">
+                    🔀
+                    <span>Git & GitHub</span>
+                </button>
+
+                <button class="tool">
+                    ⚙️
+                    <span>CI/CD</span>
+                </button>
+
+                <button class="tool">
+                    ☁️
+                    <span>AWS</span>
+                </button>
+
+                <button class="tool">
+                    ☸️
+                    <span>Kubernetes</span>
+                </button>
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="status">
+                    <span class="status-dot"></span>
+                    Gemini AI Connected
+                </div>
+            </div>
+
+        </aside>
+
+
+        <!-- Main -->
+        <main class="main">
+
+            <header class="topbar">
+
+                <div>
+                    <h1>OpsPilot AI</h1>
+                    <p>Your intelligent DevOps assistant</p>
+                </div>
+
+                <div class="online">
+                    <span></span>
+                    Online
+                </div>
+
+            </header>
+
+
+            <!-- Chat -->
+            <section class="chat-container">
+
+                <div class="welcome">
+
+                    <div class="welcome-icon">
+                        ⚡
+                    </div>
+
+                    <h2>How can I help with DevOps?</h2>
+
+                    <p>
+                        Ask me about Docker, Linux, Git, AWS,
+                        Kubernetes, CI/CD and more.
+                    </p>
+
+                </div>
+
+
+                <div id="messages" class="messages"></div>
+
+
+                <!-- Suggestions -->
+
+                <div class="suggestions">
+
+                    <button onclick="askSuggestion('Why is my Docker container not starting?')">
+                        🐳 Docker container not starting
+                    </button>
+
+                    <button onclick="askSuggestion('Explain this Linux command: chmod 755')">
+                        🐧 Explain a Linux command
+                    </button>
+
+                    <button onclick="askSuggestion('How does a Jenkins CI/CD pipeline work?')">
+                        ⚙️ Jenkins pipeline
+                    </button>
+
+                    <button onclick="askSuggestion('How do I deploy a Node.js application to AWS EC2?')">
+                        ☁️ Deploy to AWS EC2
+                    </button>
+
+                </div>
+
+
+                <!-- Input -->
+
+                <div class="input-area">
+
+                    <textarea
+                        id="question"
+                        placeholder="Ask OpsPilot anything about DevOps..."
+                        rows="1"
+                    ></textarea>
+
+                    <button id="sendButton" onclick="askAI()">
+                        Send
+                    </button>
+
+                </div>
+
+                <div class="hint">
+                    Press Enter to send • Shift + Enter for new line
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
