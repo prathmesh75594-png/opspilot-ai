@@ -27,7 +27,7 @@ const groq = new Groq({
 // HEALTH CHECK
 // ================================
 
-app.get("/", (req, res) => {
+app.get("/health", (req, res) => {
     res.json({
         success: true,
         message: "🚀 OpsPilot AI API is running!",
@@ -142,7 +142,7 @@ const frontendPath = path.join(__dirname, "..", "frontend");
 
 app.use(express.static(frontendPath));
 
-app.get("/app", (req, res) => {
+app.get("/", (req, res) => {
     res.sendFile(path.join(frontendPath, "index.html"));
 });
 
@@ -153,7 +153,7 @@ app.get("/app", (req, res) => {
 const PORT = process.env.PORT || 10000;
 
 app.listen(PORT, "0.0.0.0", () => {
-  
+
     console.log("====================================");
     console.log("🚀 OpsPilot AI server is running");
     console.log(`🌐 Port: ${PORT}`);
