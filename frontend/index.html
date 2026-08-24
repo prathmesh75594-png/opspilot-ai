@@ -3,167 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>OpsPilot AI</title>
-
+    <meta name="theme-color" content="#070b18">
+    <title>OpsPilot AI — DevOps Assistant</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+<div class="app">
 
-    <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-mark">⚡</div>
+            <div>
+                <div class="brand-name">OpsPilot</div>
+                <div class="brand-subtitle">AI DevOps Assistant</div>
+            </div>
+        </div>
 
-        <!-- Sidebar -->
-        <aside class="sidebar">
+        <div class="sidebar-label">TOOLS</div>
 
-            <div class="logo">
-                <div class="logo-icon">⚡</div>
+        <nav class="tools" aria-label="DevOps tools">
+            <button class="tool active" data-prompt="Give me a useful DevOps overview and tell me what I should focus on first.">
+                <span class="tool-icon">🤖</span><span>AI Assistant</span>
+            </button>
+            <button class="tool" data-prompt="Why is my Docker container not starting? Give me a step-by-step troubleshooting guide.">
+                <span class="tool-icon">🐳</span><span>Docker</span>
+            </button>
+            <button class="tool" data-prompt="Explain the most useful Linux commands for a DevOps engineer with examples.">
+                <span class="tool-icon">🐧</span><span>Linux</span>
+            </button>
+            <button class="tool" data-prompt="Explain Git and GitHub workflows for a DevOps project.">
+                <span class="tool-icon">🔀</span><span>Git &amp; GitHub</span>
+            </button>
+            <button class="tool" data-prompt="Explain how a Jenkins CI/CD pipeline works and show a simple pipeline structure.">
+                <span class="tool-icon">⚙️</span><span>CI/CD</span>
+            </button>
+            <button class="tool" data-prompt="How do I deploy a Node.js application to AWS EC2? Give me the steps and commands.">
+                <span class="tool-icon">☁️</span><span>AWS</span>
+            </button>
+            <button class="tool" data-prompt="Explain Kubernetes architecture and the most important kubectl commands for beginners.">
+                <span class="tool-icon">☸️</span><span>Kubernetes</span>
+            </button>
+        </nav>
 
-                <div>
-                    <h2>OpsPilot</h2>
-                    <span>AI DevOps Assistant</span>
-                </div>
+        <div class="sidebar-spacer"></div>
+
+        <div class="pro-card">
+            <div class="pro-icon">🚀</div>
+            <div class="pro-title">OpsPilot Pro</div>
+            <div class="pro-text">Advanced DevOps insights, troubleshooting and automation guidance.</div>
+            <div class="pro-button">Explore features <span>→</span></div>
+        </div>
+
+        <div class="connection-card">
+            <span class="pulse-dot"></span>
+            <div>
+                <strong>AI Engine Connected</strong>
+                <small>Ready for your questions</small>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+        <header class="topbar">
+            <div>
+                <div class="eyebrow">DEVOPS INTELLIGENCE</div>
+                <h1>OpsPilot AI</h1>
+                <p>Your intelligent DevOps assistant</p>
             </div>
 
-            <div class="sidebar-section">
-                <p>TOOLS</p>
-
-                <button class="tool active">
-                    🤖
-                    <span>AI Assistant</span>
-                </button>
-
-                <button class="tool">
-                    🐳
-                    <span>Docker</span>
-                </button>
-
-                <button class="tool">
-                    🐧
-                    <span>Linux</span>
-                </button>
-
-                <button class="tool">
-                    🔀
-                    <span>Git & GitHub</span>
-                </button>
-
-                <button class="tool">
-                    ⚙️
-                    <span>CI/CD</span>
-                </button>
-
-                <button class="tool">
-                    ☁️
-                    <span>AWS</span>
-                </button>
-
-                <button class="tool">
-                    ☸️
-                    <span>Kubernetes</span>
-                </button>
+            <div class="top-actions">
+                <div class="online-pill"><span></span> Online</div>
+                <button class="icon-button" id="clearButton" title="Clear chat" aria-label="Clear chat">↺</button>
             </div>
+        </header>
 
-            <div class="sidebar-bottom">
-                <div class="status">
-                    <span class="status-dot"></span>
-                    Gemini AI Connected
-                </div>
-            </div>
+        <section class="workspace">
 
-        </aside>
+            <!-- Hero -->
+            <section class="hero">
+                <div class="hero-grid"></div>
+                <div class="hero-glow glow-one"></div>
+                <div class="hero-glow glow-two"></div>
 
+                <div class="powered-pill"><span>✦</span> Powered by AI</div>
 
-        <!-- Main -->
-        <main class="main">
+                <h2>Hello, <span>DevOps Explorer!</span> 👋</h2>
+                <p>I'm OpsPilot AI — your intelligent assistant for Docker, Linux, Git, AWS, Kubernetes and CI/CD.</p>
 
-            <header class="topbar">
-
-                <div>
-                    <h1>OpsPilot AI</h1>
-                    <p>Your intelligent DevOps assistant</p>
-                </div>
-
-                <div class="online">
-                    <span></span>
-                    Online
-                </div>
-
-            </header>
-
-
-            <!-- Chat -->
-            <section class="chat-container">
-
-                <div class="welcome">
-
-                    <div class="welcome-icon">
-                        ⚡
+                <div class="bot-stage" aria-hidden="true">
+                    <div class="bot-orbit orbit-a"></div>
+                    <div class="bot-orbit orbit-b"></div>
+                    <div class="bot">
+                        <div class="bot-antenna"></div>
+                        <div class="bot-head">
+                            <div class="bot-ear left"></div>
+                            <div class="bot-face">
+                                <span></span><span></span>
+                                <i></i>
+                            </div>
+                            <div class="bot-ear right"></div>
+                        </div>
+                        <div class="bot-base"></div>
                     </div>
-
-                    <h2>How can I help with DevOps?</h2>
-
-                    <p>
-                        Ask me about Docker, Linux, Git, AWS,
-                        Kubernetes, CI/CD and more.
-                    </p>
-
+                    <div class="code-chip">&lt;/&gt;</div>
+                    <div class="terminal-chip">&gt;_</div>
                 </div>
-
-
-                <div id="messages" class="messages"></div>
-
-
-                <!-- Suggestions -->
-
-                <div class="suggestions">
-
-                    <button onclick="askSuggestion('Why is my Docker container not starting?')">
-                        🐳 Docker container not starting
-                    </button>
-
-                    <button onclick="askSuggestion('Explain this Linux command: chmod 755')">
-                        🐧 Explain a Linux command
-                    </button>
-
-                    <button onclick="askSuggestion('How does a Jenkins CI/CD pipeline work?')">
-                        ⚙️ Jenkins pipeline
-                    </button>
-
-                    <button onclick="askSuggestion('How do I deploy a Node.js application to AWS EC2?')">
-                        ☁️ Deploy to AWS EC2
-                    </button>
-
-                </div>
-
-
-                <!-- Input -->
-
-                <div class="input-area">
-
-                    <textarea
-                        id="question"
-                        placeholder="Ask OpsPilot anything about DevOps..."
-                        rows="1"
-                    ></textarea>
-
-                    <button id="sendButton" onclick="askAI()">
-                        Send
-                    </button>
-
-                </div>
-
-                <div class="hint">
-                    Press Enter to send • Shift + Enter for new line
-                </div>
-
             </section>
 
-        </main>
+            <!-- Chat messages -->
+            <div id="messages" class="messages" aria-live="polite"></div>
 
-    </div>
+            <!-- Quick actions -->
+            <section class="quick-grid">
+                <button class="quick-card docker" data-prompt="Why is my Docker container not starting? Give me a step-by-step troubleshooting guide.">
+                    <span class="quick-icon">🐳</span>
+                    <span class="quick-copy"><strong>Docker container not starting</strong><small>Troubleshoot container issues</small></span>
+                    <span class="arrow">→</span>
+                </button>
 
-    <script src="script.js"></script>
+                <button class="quick-card linux" data-prompt="Explain this Linux command: chmod 755. Include what each number means and examples.">
+                    <span class="quick-icon">🐧</span>
+                    <span class="quick-copy"><strong>Explain a Linux command</strong><small>Learn commands with examples</small></span>
+                    <span class="arrow">→</span>
+                </button>
 
+                <button class="quick-card cicd" data-prompt="How does a Jenkins CI/CD pipeline work? Explain the stages and give a simple example.">
+                    <span class="quick-icon">⚙️</span>
+                    <span class="quick-copy"><strong>Jenkins pipeline</strong><small>Create and debug CI/CD flows</small></span>
+                    <span class="arrow">→</span>
+                </button>
+
+                <button class="quick-card aws" data-prompt="How do I deploy a Node.js application to AWS EC2? Give me step-by-step commands.">
+                    <span class="quick-icon">☁️</span>
+                    <span class="quick-copy"><strong>Deploy to AWS EC2</strong><small>Step-by-step deployment guide</small></span>
+                    <span class="arrow">→</span>
+                </button>
+            </section>
+
+            <!-- Input -->
+            <div class="input-wrap">
+                <div class="input-area">
+                    <span class="sparkle">✦</span>
+                    <textarea id="question" placeholder="Ask OpsPilot anything about DevOps..." rows="1" aria-label="Ask OpsPilot"></textarea>
+                    <button id="sendButton" onclick="askAI()">Send <span>➤</span></button>
+                </div>
+                <div class="hint">Press Enter to send&nbsp; • &nbsp;Shift + Enter for a new line</div>
+            </div>
+
+            <!-- Feature strip -->
+            <section class="feature-strip">
+                <div><span>◈</span><strong>AI Powered</strong><small>Instant guidance</small></div>
+                <div><span>🛡</span><strong>Secure</strong><small>API key stays server-side</small></div>
+                <div><span>⚡</span><strong>Real-time</strong><small>Fast DevOps answers</small></div>
+                <div><span>🛠</span><strong>DevOps Expert</strong><small>Multi-domain support</small></div>
+            </section>
+        </section>
+    </main>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
